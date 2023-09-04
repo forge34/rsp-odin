@@ -8,26 +8,26 @@ function playRound(playerSelection, computerSelection) {
 
     switch (p){
         case 'rock':
-            if (c == 'paper'){
+            if (c === 'paper'){
                 return 'PC wins'
             }
-            else if (c == 'scissor'){
+            else if (c === 'scissors'){
                 return 'Players wins'
             }
             break
         case 'paper':
-            if (c == 'scissors'){
+            if (c === 'scissors'){
                 return 'PC wins'
             }
-            else if (c == 'rock'){
+            else if (c === 'rock'){
                 return 'Players wins'
             }
             break
         case 'scissors':
-            if (c == 'rock'){
+            if (c === 'rock'){
                 return 'PC wins'
             }
-            else if (c == 'paper'){
+            else if (c === 'paper'){
                 return 'Players wins'
             }
             break
