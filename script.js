@@ -95,6 +95,10 @@ start.onclick = () => {
         c_score_counter = 0
     }
 
+    else if (score.toLowerCase() === 'Duel'){
+        win.textContent = score
+    }
+
 
     p_score.textContent = `Player Score : ${p_score_counter}` 
     c_score.textContent = `Computer score : ${c_score_counter}`
