@@ -50,8 +50,21 @@ let paper = document.querySelector('#paper')
 let rock = document.querySelector('#rock')
 let scissors = document.querySelector('#scissors')
 let start = document.querySelector('#start')
-let p_score = document.querySelector('#player-score')
-let c_score = document.querySelector('#pc-score')
+
+
+
+let score_board = document.querySelector('.score-board')
+let p_score = document.createElement('div')
+let c_score = document.createElement('div')
+let win = document.createElement('div')
+
+
+p_score.textContent = `Player Score : ${p_score_counter}` 
+c_score.textContent = `Computer score : ${c_score_counter}`
+
+
+score_board.append(p_score , c_score , win)
+
 
 paper.onclick = () => playerSelection = 'paper'
 rock.onclick = () => playerSelection = 'rock'
@@ -71,8 +84,19 @@ start.onclick = () => {
         c_score_counter++
     }
 
-    p_score.textContent = `Player Score : ${p_score_counter}`
+    if (p_score_counter >= 5){
+        win.textContent = score
+        p_score_counter = 0
+        c_score_counter = 0
+    }
+    else if (c_score_counter >= 5){
+        win.textContent = score
+    }
+
+
+    p_score.textContent = `Player Score : ${p_score_counter}` 
     c_score.textContent = `Computer score : ${c_score_counter}`
 
 
+    
 }
