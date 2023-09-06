@@ -91,6 +91,8 @@ start.onclick = () => {
     }
     else if (c_score_counter >= 5){
         win.textContent = score
+        p_score_counter = 0
+        c_score_counter = 0
     }
 
 
